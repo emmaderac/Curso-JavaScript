@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Dark Mode</title>
+    <style>
+        body {
+            background: #181818;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .blog-entry {
+            background: #232323;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            margin-bottom: 28px;
+            padding: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .blog-entry:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .blog-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #90caf9;
+        }
+        .blog-date {
+            font-size: 0.95em;
+            color: #bdbdbd;
+            margin-bottom: 14px;
+        }
+        .blog-content {
+            font-size: 1.08em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="blog-entry">
+            <div class="blog-title">Primeros pasos con JavaScript</div>
+            <div class="blog-date">10 de Junio, 2024</div>
+            <div class="blog-content">
+                Descubre cómo comenzar a programar en JavaScript, el lenguaje más popular para desarrollo web. Aprende sobre variables, funciones y eventos.
+            </div>
+        </section>
+        <section class="blog-entry">
+            <div class="blog-title">¿Qué es el Dark Mode?</div>
+            <div class="blog-date">8 de Junio, 2024</div>
+            <div class="blog-content">
+                El modo oscuro ayuda a reducir la fatiga visual y mejora la experiencia de usuario en ambientes con poca luz. ¡Implementa dark mode en tus proyectos!
+            </div>
+        </section>
+        <section class="blog-entry">
+            <div class="blog-title">Consejos para mejorar tu código</div>
+            <div class="blog-date">5 de Junio, 2024</div>
+            <div class="blog-content">
+                Escribe código limpio y mantenible siguiendo buenas prácticas como la indentación, comentarios útiles y nombres descriptivos para tus variables.
+            </div>
+        </section>
+    </div>
+</body>
+</html>
