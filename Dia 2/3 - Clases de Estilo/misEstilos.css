@@ -1,0 +1,48 @@
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    font-size: 24px;
+}
+
+p {
+    text-align: center;
+}
+
+.estilo1 {
+    color: blue;
+    font-size: 20px;
+    border: 1px solid blue;
+    border-style: dashed;
+}
+
+.estilo2 {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.estilo3 {
+    color: red;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.estilo4 {
+    color: purple;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.estilo5 {
+    color: orange;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.estilo6 {
+    color: pink;
+    font-size: 10px;
+    letter-spacing: 2px;
+    background-color: black;
+}

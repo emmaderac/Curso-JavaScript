@@ -1,0 +1,36 @@
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    color: darkgreen;
+    font-size: 20px;
+}
+
+p {
+    text-align: justify;
+    color: #180340;
+
+}
+
+.content {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formula {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+span {
+    color: #2b00ff;
+    font-size: 16px;
+    font-weight: bold;
+}
