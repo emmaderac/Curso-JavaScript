@@ -1,0 +1,59 @@
+
+        /* Selector de etiqueta */
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+        body {
+            background-color: #626262;
+        }
+
+        /* Selector de clase */
+        .destacado {
+            background-color: #ffe082;
+            font-weight: bold;
+        }
+
+        /* Selector de ID */
+        #especial {
+            color: white;
+            background: #43a047;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #lorem {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0;
+            text-align: justify;    
+        }
+        /* Selector de atributo */
+        a[target="_blank"] {
+            color: #d84315;
+            text-decoration: underline;
+        }
+
+        /* Selector descendente */
+        ul li {
+            font-style: italic;
+        }
+
+        /* Selector de pseudoclase */
+        button:hover {
+            background: #1976d2;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: #ff5722;
+            text-decoration: underline;
+        }
+
+        a:hover[href*="https://"] {
+            color: #4878a2;
+            text-decoration: wavy underline;
+
+        }
