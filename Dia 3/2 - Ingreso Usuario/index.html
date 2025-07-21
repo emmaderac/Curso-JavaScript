@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Ingreso de Usuario</title>
+</head>
+<body>
+    <h1>Formulario de Ingreso</h1>
+    <form id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button onclick="ingresarUsuario()" type="submit">Ingresar</button>
+    </form>
+
+    <script>
+        function ingresarUsuario() {
+            alert("¡Ingreso exitoso! Gracias por ingresar, " + document.getElementById("username").value + "!");
+        }
+    </script>
+</body>
+</html>

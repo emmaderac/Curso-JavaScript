@@ -1,0 +1,240 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* === HEADER / INICIO === */
+header {
+  /* background: linear-gradient(135deg, #1f1f1f, #111111); */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #66fcf1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+}
+
+.botones a {
+  display: inline-block;
+  background: #1b1f3a;
+  color: #66fcf1;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  border: 1px solid #66fcf1;
+}
+
+.botones a:hover {
+  background: #66fcf1;
+  color: #0d0d0d;
+}
+
+/* === SOBRE MÍ === */
+#sobre-mi p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+#sobre-mi a {
+  display: inline-block;
+  margin-top: 20px;
+  background: #1f1f1f;
+  padding: 10px 20px;
+  border: 1px solid #a64bf4;
+  color: #a64bf4;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#sobre-mi a:hover {
+  background: #a64bf4;
+  color: #0d0d0d;
+}
+
+/* === PORTAFOLIO === */
+.filtros {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filtros button {
+  background: #1f1f1f;
+  color: #66fcf1;
+  border: 1px solid #66fcf1;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
+  background: #66fcf1;
+  color: #0d0d0d;
+}
+
+.galeria-proyectos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.proyecto {
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.1);
+  text-align: center;
+  color: #ccc;
+}
+
+/* === CERTIFICACIONES === */
+.galeria-certificaciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.certificado {
+  background: linear-gradient(135deg, #282828, #111);
+  border: 1px solid #9d4edd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  color: #ccc;
+}
+
+/* === CONTACTO === */
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 12px;
+  margin: 10px 0;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  color: #f0f0f0;
+  border-radius: 6px;
+}
+
+#contacto button {
+  background: #66fcf1;
+  color: #0d0d0d;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contacto button:hover {
+  background: #0dd9ce;
+}
+
+/* === FOOTER === */
+footer {
+  background: #0d0d0d;
+  text-align: center;
+  padding: 30px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blur-bg {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Brillos Glow */
+.blur-blue {
+  width: 400px;
+  height: 400px;
+  background: #00f0ff;
+  top: 10%;
+  left: -100px;
+}
+
+.blur-purple {
+  width: 500px;
+  height: 500px;
+  background: #a64bf4;
+  bottom: 10%;
+  right: -150px;
+}
+
+.blur-pink {
+  width: 300px;
+  height: 300px;
+  background: #ff2eea;
+  top: 45rem;
+  right: 10%;
+}
+
+.blur-teal {
+  width: 600px;
+  height: 600px;
+  background: #00ffb3;
+  top: 95rem;
+  right: 100px;
+}
+
+.blur-sky-blue {
+  width: 400px;
+  height: 400px;
+  background: #00c8ff;
+  top: 70rem;
+  left: 10%;
+}
