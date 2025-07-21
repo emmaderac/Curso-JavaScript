@@ -1,0 +1,64 @@
+/* Fondo oscuro y fuente moderna */
+body {
+    background: #181818;
+    color: #fff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Título principal con efecto neón */
+h1 {
+    color: #39ff14;
+    text-shadow:
+        0 0 5px #39ff14,
+        0 0 10px #39ff14,
+        0 0 20px #39ff14,
+        0 0 40px #39ff14;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Subtítulos con neón azul */
+h2 {
+    color: #00eaff;
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 10px #00eaff,
+        0 0 20px #00eaff;
+    margin-top: 30px;
+}
+
+/* Párrafos con sombra suave */
+p {
+    color: #fff;
+    text-shadow: 0 0 4px #00eaff80;
+    font-size: 1.1em;
+}
+
+/* Código y preformateado con neón rosa */
+code, pre {
+    background: #222;
+    color: #ff00cc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1em;
+    text-shadow:
+        0 0 5px #ff00cc,
+        0 0 10px #ff00cc;
+    box-shadow: 0 0 10px #ff00cc50;
+    display: inline-block;
+}
+
+/* Resalta el bloque de ejemplo */
+pre {
+    display: block;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+/* Efecto neón al pasar el mouse por los títulos */
+h1:hover, h2:hover {
+    filter: brightness(1.3) drop-shadow(0 0 10px #fff);
+    cursor: pointer;
+}
