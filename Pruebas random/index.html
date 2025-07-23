@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablon de Chismes TDI</title>
+</head>
+<body>
+
+    <h1 class="titulo-chismes">Bienvenidos al Tablón de Chismes TDI, donde la información se comparte y se comenta.</h1>
+    <style>
+    .titulo-chismes {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #7c3aed;
+        margin: 36px auto 28px auto;
+        letter-spacing: 1px;
+        background: linear-gradient(90deg, #a259e6 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 0 2px 12px rgba(124,58,237,0.08);
+    }
+    </style>
+
+    <style>
+        body {
+            background: #f8f6fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #3d2352;
+            margin: 0;
+            padding: 0;
+        }
+        .tablon-chismes {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        .chisme-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(120, 72, 180, 0.08);
+            border-left: 5px solid #a259e6;
+            margin-bottom: 24px;
+            padding: 20px 24px;
+            transition: box-shadow 0.2s;
+        }
+        .chisme-card:hover {
+            box-shadow: 0 4px 16px rgba(120, 72, 180, 0.16);
+        }
+        .chisme-titulo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #7c3aed;
+            margin-bottom: 8px;
+        }
+        .chisme-texto {
+            font-size: 1rem;
+            color: #3d2352;
+            margin-bottom: 0;
+        }
+    </style>
+
+    <div class="tablon-chismes">
+        <div class="chisme-card">
+            <div class="chisme-titulo">Nuevo rumor en la oficina</div>
+            <div class="chisme-texto">Dicen que habrá una sorpresa en la próxima reunión de equipo. ¿Será cierto?</div>
+        </div>
+        <div class="chisme-card">
+            <div class="chisme-titulo">¡Cambio de jefe!</div>
+            <div class="chisme-texto">Parece qu cvfe el jefe de proyectos será reemplazado por alguien nuevo la próxima semana.</div>
+        </div>
+        <div class="chisme-card">
+            <div class="chisme-titulo">Fiesta secreta</div>
+            <div class="chisme-texto">Algunos compañeros están organizando una fiesta sorpresa para el cumpleaños de Ana.</div>
+        </div>
+    </div>
+
+    <div style="max-width:600px;margin:32px auto 0;padding:0 16px;">
+        <form id="form-chisme" autocomplete="off">
+            <label for="nuevo-chisme" style="font-weight:600;display:block;margin-bottom:8px;">Comparte tu chisme anónimamente:</label>
+            <input type="text" id="nuevo-chisme" name="nuevo-chisme" placeholder="Escribe tu chisme aquí..." style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;margin-bottom:12px;" required>
+            <button type="submit" style="background:#7c3aed;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;">Enviar</button>
+        </form>
+    </div>
+    <script>
+    document.getElementById('form-chisme').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const texto = document.getElementById('nuevo-chisme').value.trim();
+        if(texto) {
+            const tablon = document.querySelector('.tablon-chismes');
+            const card = document.createElement('div');
+            card.className = 'chisme-card';
+            card.innerHTML = `
+                <div class="chisme-titulo">Chisme anónimo</div>
+                <div class="chisme-texto"></div>
+            `;
+            card.querySelector('.chisme-texto').textContent = texto;
+            tablon.prepend(card);
+            this.reset();
+        }
+    });
+    </script>
+</body>
+</html>
