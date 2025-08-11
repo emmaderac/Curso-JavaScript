@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="comenzarReloj()">
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Corre Tiempo </button>
+    <h1 style="color: red;" id="textoAlarma">00:00:00</h1>
+
+    <audio id="audioAlarma" src="audio/alarma.mp3" type="audio/mpeg">
+        error, sonido no encontrado
+    </audio>
+    <audio controls src="audio/alarma.mp3" type="audio/mpeg">
+        error, sonido no encontrado
+    </audio>
+
+    <script>
+        let elementoSegundo = document.getElementById("tiempoElegido");
+        let elementoTextoAlarma = document.getElementById("textoAlarma");
+        let elementoTextoAlarmaSub = document.getElementById("textoAlarmaSub");
+
+        let elementoSonidoAlarma = document.getElementById("audioAlarma");
+
+        function comenzarTiempo() {
+            elementoTextoAlarma.textContent = "Apagado";
+            elementoTextoAlarma.style.color = "red";
+            elementoTextoAlarma.style.textShadow = "none";
+            elementoTextoAlarmaSub.textContent = "00:00";
+            setTimeout(tiempoCumplido, 1000 * elementoSegundo.value);
+        }
+
+        function tiempoCumplido() {
+            elementoTextoAlarma.textContent = "Encendido!";
+            elementoTextoAlarma.style.color = "green";
+            elementoTextoAlarmaSub.textContent = document.getElementById("tiempoElegido").value + " segundos";
+            elementoTextoAlarmaSub.style.color = "green";
+            elementoSonidoAlarma.play();
+        }
+
+        function comenzarReloj() {
+            setInterval(ticTTac, 1000);
+
+        }
+
+        function ticTTac() {
+            let tiempoActual = new Date();
+            let hora = String(tiempoActual.getHours()).padStart(2, '0');
+            let minutos = String(tiempoActual.getMinutes()).padStart(2, '0');
+            let segundos = String(tiempoActual.getSeconds()).padStart(2, '0');
+
+            let textoHora = hora+ ":" + minutos + ":" + segundos;
+            elementoTextoAlarma.textContent = textoHora;
+        }
+    
+        alert(new Date().toLocaleDateString('es-ES'));
+
+        function test() {
+    console.log("+1 segundo");
+}
+
+let testInterval = setInterval(test, 1000);
+
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    </html>
+
+    </head>
+    <body onload="comenzarReloj()">
+        <h1>Juego de Preguntas: Datos Curiosos de Animales</h1>
+        <form>
+            <div>
+                <label for="q1">1. ¿Cuál es el animal más rápido del mundo?</label><br>
+                <input type="text" id="q1" name="q1">
+            </div>
+            <div>
+                <label for="q2">2. ¿Qué mamífero es capaz de volar?</label><br>
+                <input type="text" id="q2" name="q2">
+            </div>
+            <div>
+                <label for="q3">3. ¿Qué animal tiene la lengua más larga en proporción a su cuerpo?</label><br>
+                <input type="text" id="q3" name="q3">
+            </div>
+            <div>
+                <label for="q4">4. ¿Cuál es el animal más grande del planeta?</label><br>
+                <input type="text" id="q4" name="q4">
+            </div>
+            <div>
+                <label for="q5">5. ¿Qué animal puede dormir hasta tres años seguidos?</label><br>
+                <input type="text" id="q5" name="q5">
+            </div>
+            <div id="botones">
+                <button type="button" onclick="finalizarJuego()">Finalizar</button>
+                <button type="button" onclick="location.reload()">Volver a intentar</button>
+            </div>
+            
+            <div id="timer" style="font-size: 1.5em; margin-top: 20px;">Tiempo restante: 30</div>
+            <audio id="gameOverAudio" src="audio/gameover.mp3" preload="auto"></audio>
+
+            <script>
+                function finalizarJuego() {
+                    const respuestas = [
+                        document.getElementById('q1').value,
+                        document.getElementById('q2').value,
+                        document.getElementById('q3').value,
+                        document.getElementById('q4').value,
+                        document.getElementById('q5').value
+                    ];
+                    const hoy = new Date();
+                    const fecha = hoy.toLocaleDateString();
+                    let mensaje = `Respuestas:\n`;
+                    respuestas.forEach((resp, idx) => {
+                        mensaje += `${idx + 1}. ${resp}\n`;
+                    });
+                    mensaje += `Fecha: ${fecha}`;
+                    alert(mensaje);
+                }
+           
+                function comenzarReloj() {
+                    let tiempoRestante = 30; // Segundos asignados al juego
+                    const timerElement = document.getElementById('timer');
+                    const gameOverAudio = document.getElementById('gameOverAudio');
+
+                    const intervalo = setInterval(() => {
+                        if (tiempoRestante <= 0) {
+                            clearInterval(intervalo);
+                            timerElement.textContent = "¡Tiempo agotado!";
+                            gameOverAudio.play();
+                            alert("Game Over! El tiempo se ha agotado.");
+                        } else {
+                            timerElement.textContent = `Tiempo restante: ${tiempoRestante}`;
+                            tiempoRestante--;
+                        }
+                    }, 1000);
+                }
+            </script>
+        </form>
+    </body>
+    </html>
