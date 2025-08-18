@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="misScripts.js"></script>
+</head>
+<body>
+    <div class="calculadora">
+        <div>
+            <input type="number" id="operador1" placeholder="Operador 1">
+            <div class="visor" id="visor1"></div>
+        </div>
+        <div>
+            <input type="number" id="operador2" placeholder="Operador 2">
+            <div class="visor" id="visor2"></div>
+        </div>
+        <div class="botones">
+            <button onclick="calcular('sumar')">+</button>
+            <button onclick="calcular('restar')">-</button>
+            <button onclick="calcular('multiplicar')">×</button>
+            <button onclick="calcular('dividir')">÷</button>
+            <button onclick="calcular('potencia')">Potencia</button>
+            <button onclick="calcular('raiz')">Raíz Cuadrada</button>
+            <button onclick="calcular('absoluto')">Absoluto</button>
+            <button onclick="calcular('random')">Random</button>
+        </div>
+        <div class="visor" id="resultado">Resultado: </div>
+        <div class="redondeo">
+            <button onclick="redondear('round')">Redondear (Round)</button>
+            <button onclick="redondear('floor')">Redondear (Floor)</button>
+            <button onclick="redondear('ceil')">Redondear (Ceil)</button>
+        </div>
+    </div>
+    
+</body>
+</html>
